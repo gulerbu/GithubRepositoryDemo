@@ -20,6 +20,7 @@
                       android:orientation="horizontal">
 
             <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/activity_repository_detail_image_view_avatar"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     app:imageUrl="@{viewModel.repository.owner.userAvatarUrl}"/>
@@ -32,6 +33,7 @@
                     android:orientation="vertical">
 
                 <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/activity_repository_detail_text_view_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -53,6 +55,7 @@
                             android:orientation="vertical">
 
                         <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/activity_repository_detail_text_view_star_count_title"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/stars_count_text"
@@ -60,6 +63,7 @@
                                 android:gravity="center"/>
 
                         <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/activity_repository_detail_text_view_star_count"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
@@ -77,6 +81,7 @@
                             android:orientation="vertical">
 
                         <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/activity_repository_detail_text_view_open_issue_count_title"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/open_issues_count_text"
@@ -84,6 +89,7 @@
                                 android:gravity="center"/>
 
                         <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/activity_repository_detail_text_view_open_issue_count"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:gravity="center"
