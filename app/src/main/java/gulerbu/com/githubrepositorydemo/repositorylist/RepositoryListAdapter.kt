@@ -11,6 +11,8 @@ import gulerbu.com.githubrepositorydemo.model.Repository
 class RepositoryListAdapter(private val repositoryList: List<Repository>) :
     RecyclerView.Adapter<RepositoryListAdapter.ViewHolder>() {
 
+    var onItemClick: ((Repository) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val binding = LayoutRepositoryListItemBinding.inflate(layoutInflater, parent, false)
@@ -26,6 +28,12 @@ class RepositoryListAdapter(private val repositoryList: List<Repository>) :
 
     inner class ViewHolder(private val binding: LayoutRepositoryListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(repositoryList[adapterPosition])
+            }
+        }
 
         fun bind(repository: Repository) {
             binding.repository = repository

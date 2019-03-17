@@ -1,8 +1,10 @@
-
 <resources>
     <string name="app_name">GithubRepositoryDemo</string>
     <string name="search_hint_text">Username</string>
     <string name="search_button_text">Search</string>
     <string name="search_error_text">Something went wrong.Try Again!</string>
     <string name="search_no_results_text">No Result</string>
+    <string name="stars_count_text">Stars</string>
+    <string name="open_issues_count_text">Open Issues</string>
+    <string name="home_page_title">Home</string>
 </resources>

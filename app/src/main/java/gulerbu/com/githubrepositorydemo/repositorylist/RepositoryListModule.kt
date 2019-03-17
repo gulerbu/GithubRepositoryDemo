@@ -10,14 +10,16 @@ object RepositoryListModule {
 
     fun createViewModel(
         activity: BaseActivity<*>,
-        repository: RepositoryListContract.Repository
-    ): RepositoryListActivityViewModel {
+        repository: RepositoryListContract.Repository,
+        router: RepositoryListContract.Router
+    ): RepositoryListViewModel {
         return ViewModelProviders.of(activity, createFactory {
-            RepositoryListActivityViewModel(
+            RepositoryListViewModel(
                 repository,
-                ResourceHelper
+                ResourceHelper,
+                router
             )
-        }).get(RepositoryListActivityViewModel::class.java)
+        }).get(RepositoryListViewModel::class.java)
 
     }
 }

@@ -13,8 +13,11 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".repositorydetail.RepositoryDetailActivity"/>
-        <activity android:name=".repositorylist.RepositoryListActivity">
+        <activity android:name=".repositorydetail.RepositoryDetailActivity"
+                  android:parentActivityName=".repositorylist.RepositoryListActivity"/>
+
+        <activity android:name=".repositorylist.RepositoryListActivity"
+                  android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

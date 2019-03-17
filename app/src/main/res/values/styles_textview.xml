@@ -12,5 +12,13 @@
         <item name="android:textColor">@color/black_40</item>
     </style>
 
+    <style name="GRTextAppearance.20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="GRTextAppearance.20.Black40">
+        <item name="android:textColor">@color/black_40</item>
+    </style>
+
 
 </resources>
