@@ -1,3 +1,8 @@
+
 <resources>
     <string name="app_name">GithubRepositoryDemo</string>
+    <string name="search_hint_text">Username</string>
+    <string name="search_button_text">Search</string>
+    <string name="search_error_text">Something went wrong.Try Again!</string>
+    <string name="search_no_results_text">No Result</string>
 </resources>
