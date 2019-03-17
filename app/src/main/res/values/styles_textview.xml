@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="GRTextAppearance" parent="TextAppearance.AppCompat"/>
+
+    <style name="GRTextAppearance.18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="GRTextAppearance.18.Black40">
+        <item name="android:textColor">@color/black_40</item>
+    </style>
+
+
+</resources>

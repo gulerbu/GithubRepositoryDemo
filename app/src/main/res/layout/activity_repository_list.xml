@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+        <variable
+                name="viewModel"
+                type="gulerbu.com.githubrepositorydemo.repositorylist.RepositoryListActivityViewModel"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/default_padding">
+
+            <android.support.v7.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@={viewModel.username}"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:hint="@string/search_hint_text"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:onClick="@{() -> viewModel.onSearchClick()}"
+                    android:text="@string/search_button_text"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                app:viewVisibility="@{viewModel.inProgress}"
+                android:layout_gravity="center"/>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.infoText}"
+                android:gravity="center"
+                android:padding="@dimen/default_padding"
+                app:viewVisibility="@{viewModel.showInfoText}"/>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_repository_list_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:viewVisibility="@{!viewModel.inProgress &amp;&amp; !viewModel.showInfoText}">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</layout>
